@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arstag Chatbox</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chatbox">
+        <div class="chatbox-header">
+            <img src="{{ url_for('static', filename='arstaglogo_resized.png') }}" alt="Arstag Logo" class="logo">
+            <h2>Asystent AI</h2>
+        </div>
+        <div class="chatbox-messages" id="chat-log">
+            <div class="message received">Witaj! W czym mogę pomóc?</div>
+        </div>
+        <div class="chatbox-input">
+            <input type="text" id="userInput" placeholder="Napisz wiadomość...">
+            <button id="sendButton">Wyślij</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
